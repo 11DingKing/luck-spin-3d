@@ -937,6 +937,73 @@ body {
     color: var(--text-primary);
 }
 
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: var(--radius-md);
+}
+
+.toggle-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 32px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-fast);
+    border-radius: 32px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: all var(--transition-fast);
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background: var(--gold-gradient);
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(28px);
+}
+
+.toggle-slider:hover {
+    border-color: rgba(255, 215, 0, 0.4);
+}
+
 .file-upload-area {
     padding: 32px;
     border: 2px dashed rgba(255, 215, 0, 0.2);
