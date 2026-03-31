@@ -937,6 +937,52 @@ body {
     color: var(--text-primary);
 }
 
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.toggle-switch label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.toggle-switch input[type="checkbox"] {
+    appearance: none;
+    width: 50px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    position: relative;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.toggle-switch input[type="checkbox"]:checked {
+    background: var(--gold-gradient);
+    border-color: var(--gold-primary);
+}
+
+.toggle-switch input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    background: #ffffff;
+    transition: all var(--transition-fast);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-switch input[type="checkbox"]:checked::before {
+    left: 24px;
+}
+
 .file-upload-area {
     padding: 32px;
     border: 2px dashed rgba(255, 215, 0, 0.2);
