@@ -378,7 +378,8 @@ const LotteryStorage = {
     getSettings() {
         return this._safeGet(StorageKeys.SETTINGS, {
             backgroundImage: '',
-            lotterySpeed: 'normal'
+            lotterySpeed: 'normal',
+            soundEnabled: true
         });
     },
 
